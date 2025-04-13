@@ -40,4 +40,4 @@ visualkeras.layered_view(model, legend=True, to_file='./plots/mobile_net_v2_mode
 model.fit(x_train, y_train_cat, validation_data=(x_test, y_test_cat), epochs=5, batch_size=64)
 
 # Evaluate the model
-plot_confusion_matrix(model, x_test, y_test, 'Transfer Learning Model', './plots/confusion_matrix_tf.png')
+plot_confusion_matrix(model, x_test, y_test, 'Transfer Learning Model', './plots/confusion_matrix_tl.png')
