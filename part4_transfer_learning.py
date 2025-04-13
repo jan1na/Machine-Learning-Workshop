@@ -37,7 +37,7 @@ visualkeras.layered_view(model, legend=True, to_file='./plots/mobile_net_v2_mode
 
 # Train the model
 # TODO: Try different batch sizes or epochs
-model.fit(x_train, y_train_cat, validation_data=(x_test, y_test_cat), epochs=1, batch_size=64)
+model.fit(x_train, y_train_cat, validation_data=(x_test, y_test_cat), epochs=5, batch_size=64)
 
 # Evaluate the model
 plot_confusion_matrix(model, x_test, y_test, 'Transfer Learning Model', './plots/confusion_matrix_tf.png')
