@@ -1,10 +1,7 @@
 from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import accuracy_score, confusion_matrix, ConfusionMatrixDisplay
 from tensorflow.keras.datasets import cifar10
-import matplotlib.pyplot as plt
 
-# Class names from CIFAR-10 dataset
-class_names = ["airplane", "automobile", "bird", "cat", "deer", "dog", "frog", "horse", "ship", "truck"]
+from utils.eval import plot_confusion_matrix
 
 # Load CIFAR-10 dataset
 (X_train, y_train), (X_test, y_test) = cifar10.load_data()
@@ -20,17 +17,5 @@ n_neighbors = 1  # Default value, change this to experiment with KNN
 knn = KNeighborsClassifier(n_neighbors=n_neighbors)
 knn.fit(X_train_flat, y_train.flatten())
 
-# KNN prediction and accuracy
-y_pred_knn = knn.predict(X_test_flat)
-acc_knn = accuracy_score(y_test, y_pred_knn)
-print(f"KNN Accuracy on CIFAR-10 with {n_neighbors} neighbors: {acc_knn:.2f}")
-
-# Compute confusion matrix
-cm_knn = confusion_matrix(y_test, y_pred_knn)
-
-# Display confusion matrix with class names
-disp = ConfusionMatrixDisplay(confusion_matrix=cm_knn, display_labels=class_names)
-disp.plot(cmap=plt.cm.Blues)
-plt.title(f'Confusion Matrix for KNN (n_neighbors={n_neighbors})')
-plt.show()
-
+plot_confusion_matrix(knn, X_test_flat, y_test, f'KNN Classifier (n_neighbors={n_neighbors})',
+                      './plots/confusion_matrix_knn.png', knn=True)

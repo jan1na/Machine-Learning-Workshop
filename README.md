@@ -13,6 +13,7 @@ Files Overview
 - ```part1_explore_cifar10.py```: Visualize the CIFAR-10 dataset.
 - ```part2_knn.py```: Implement the K-Nearest Neighbors algorithm for image classification.
 - ```part3_cnn.py```: Build and train a Convolutional Neural Network for image classification.
+- ```part4_tranfer_learning.py```: Use transfer learning with a pre-trained model MobileNetV2 trained on ImageNet.
 
 ## Getting Started
 1. Install **Python 3.12** from [here](https://www.python.org/downloads/).

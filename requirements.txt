@@ -3,3 +3,4 @@ matplotlib==3.9.0
 tensorflow
 numpy
 seaborn
+visualkeras
