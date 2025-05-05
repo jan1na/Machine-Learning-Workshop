@@ -15,6 +15,8 @@ Files Overview
 - ```part3_cnn.py```: Build and train a Convolutional Neural Network for image classification.
 - ```part4_tranfer_learning.py```: Use transfer learning with a pre-trained model MobileNetV2 trained on ImageNet.
 
+Presentation Slides: ```Machine_Learning_Workshop.pdf```
+
 ## Getting Started
 1. Install **Python 3.12** from [here](https://www.python.org/downloads/).
 2. Download **Jetbrains PyCharm** IDE from [here](https://www.jetbrains.com/pycharm/download/) or using Jetbrains Toolbox.
